@@ -1,0 +1,16 @@
+def is_fibonacci(num):
+    """Check if a number is in the Fibonacci sequence."""
+    a, b = 0, 1
+    while a < num:
+        a, b = b, a + b
+    return a == num
+
+if __name__ == "__main__":
+    try:
+        user_num = int(input("Enter a number: "))
+        if is_fibonacci(user_num):
+            print(f"{user_num} is in the Fibonacci sequence!")
+        else:
+            print(f"{user_num} is not in the Fibonacci sequence.")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
